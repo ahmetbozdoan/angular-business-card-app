@@ -1,0 +1,15 @@
+<mat-card (click)="editCard()">
+  <mat-card-header>
+    <mat-card-title>{{data.name}}</mat-card-title>
+    <mat-card-subtitle>{{data.job}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>{{data.tel}}<span *ngIf="!data.tel">Telefon girilmemiş!</span></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>{{data.email}}<span *ngIf="!data.email">Eposta girilmemiş!</span></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>{{data.adress}}<span *ngIf="!data.adress">Adres girilmemiş!</span></mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

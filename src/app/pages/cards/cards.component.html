@@ -1,0 +1,25 @@
+<main>
+  <div fxLayoutAlign="space-between center">
+    <div>
+      <h1 class="page-title">Kartlar</h1>
+      <p class="page-description">Kartlar listesi</p>
+    </div>
+    <div>
+      <mat-form-field appearance="legacy">
+        <mat-label>Kartvizit Ara...</mat-label>
+        <input matInput placeholder="Kartvizit Ara..." [(ngModel)]="search" (ngModelChange)="searchChange()">
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="openDialog()">Yeni Kartvizit</button>
+    </div>
+  </div>
+  <hr>
+  <div class="container">
+    <div fxLayout="row wrap"  fxLayoutGap="20px grid" fxLayoutAlign="start">
+      <div fxLayout="" *ngFor="let data of datas">
+        <app-card-item [data]="data"></app-card-item>
+      </div>
+      <div class="spinner" *ngIf="!datas"><mat-spinner></mat-spinner></div>
+      <div *ngIf="datas?.length === 0">Yeni kartvizit ekleyebilirsiniz.</div>
+    </div>
+  </div>
+</main>

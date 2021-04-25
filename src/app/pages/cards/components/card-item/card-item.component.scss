@@ -1,0 +1,15 @@
+.mat-card {
+  min-width: 250px;
+  max-width: 250px;
+  cursor: pointer;
+  transition: transform .3s ease;
+  &:hover{
+    transform: scale(1.05);
+  }
+  .mat-list-item {
+    span {
+      color: #dc3545;
+    }
+  }
+
+}
